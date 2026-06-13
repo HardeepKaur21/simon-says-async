@@ -4,13 +4,9 @@ This was Assignment 2 for my CS230 Web Information Processing module at Maynooth
 
 The goal was to recreate the Simon game using only HTML, CSS and JavaScript. The game generates a random sequence of colours which the player must remember and repeat. Each round adds a new colour, making the sequence longer and harder to remember.
 
----
-
 ## Screenshot
 
 ![Project Screenshot](screenshot.png)
-
----
 
 ## Features
 
@@ -21,15 +17,11 @@ The goal was to recreate the Simon game using only HTML, CSS and JavaScript. The
 - Start/Restart functionality
 - Visual game status indicator (the dot under the start button)
 
----
-
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
-
----
 
 ## What I Learned
 
