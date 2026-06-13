@@ -1,0 +1,174 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.center {
+  position: relative;
+  width: 550px;
+  height: 550px;
+}
+
+/* MECHANISM STUFF -------------------------------------------------------------------------------------------------------------- */
+.mechanism {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  background: black;
+  border-radius: 50%;
+  border: 8px solid #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* score displays + start button */
+.control-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.high-score,
+.score {
+  width: 50px;
+  height: 40px;
+  background: #333;
+  color: #0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #000;
+  border: none;
+  padding: 2px 5px;
+}
+
+#start-button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 7px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  font-family: "Orbitron", sans-serif;
+}
+
+#start-button:hover {
+  background: #777;
+}
+
+/* Status light */
+.status-red,
+.status-green {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.status-red {
+  background: red;
+}
+
+.status-green {
+  background: limegreen;
+}
+
+/* BLACK OUTER CORNER STUFF ---------------------------------------------------------------------------- */
+.corner {
+  position: absolute;
+  width: 235px;
+  height: 235px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.green {
+  top: 0;
+  left: 0;
+}
+
+.red {
+  top: 0;
+  right: 0;
+}
+
+.yellow {
+  bottom: 0;
+  left: 0;
+}
+
+.blue {
+  bottom: 0;
+  right: 0;
+}
+
+/* Coloured Buttons ---------------- */
+.coloured-corner-green,
+.coloured-corner-red,
+.coloured-corner-yellow,
+.coloured-corner-blue {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.coloured-corner-green {
+  background: radial-gradient(circle at 30% 30%, #7df76b, #2f8d25);
+}
+
+.coloured-corner-red {
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #b22222);
+}
+
+.coloured-corner-yellow {
+  background: radial-gradient(circle at 30% 30%, #fff36b, #c9b021);
+}
+
+.coloured-corner-blue {
+  background: radial-gradient(circle at 30% 30%, #6bbcff, #1d4d99);
+}
+
+.coloured-corner-green:active,
+.coloured-corner-red:active,
+.coloured-corner-yellow:active,
+.coloured-corner-blue:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.coloured-corner-green:hover,
+.coloured-corner-red:hover,
+.coloured-corner-yellow:hover,
+.coloured-corner-blue:hover {
+  filter: brightness(1.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* No need for responsiveness, the simon says interface is fully visible in the smallest width possible of my browser. It is only 
+sensitive to height. Smaller heights crop the interface which remains centred nevertheless. I do not think smaller heights are a big issue, 
+smaller widths are.*/
